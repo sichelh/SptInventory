@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: ItemDataList
+  m_EditorClassIdentifier: Assembly-CSharp::ItemDataList
+  items:
+  - Name: Sword
+    Type: 0
+    Icon: {fileID: 21300000, guid: 4eaae8177cd2b4146b1e95058837cb28, type: 3}
+    Atk: 20
+    Def: 0
+    Hp: 0
+    Crit: 0
+  - Name: Axe
+    Type: 0
+    Icon: {fileID: 21300000, guid: 27753b95aa4c7114c9d09a3df5da165e, type: 3}
+    Atk: 0
+    Def: 50
+    Hp: 0
+    Crit: 0
+  - Name: Staff
+    Type: 0
+    Icon: {fileID: 21300000, guid: 165c0c9f5612b824ca5627866617034c, type: 3}
+    Atk: 0
+    Def: 0
+    Hp: 30
+    Crit: 0
+  - Name: Bow
+    Type: 0
+    Icon: {fileID: 21300000, guid: 62a65106f63218a4b8d0d0362d19de36, type: 3}
+    Atk: 0
+    Def: 0
+    Hp: 0
+    Crit: 40
+  - Name: Cleaver
+    Type: 0
+    Icon: {fileID: 21300000, guid: 23fe034fc858cc04396c7bcfbc0b504f, type: 3}
+    Atk: 0
+    Def: 0
+    Hp: 0
+    Crit: 20
+  - Name: DoubleAxe
+    Type: 0
+    Icon: {fileID: 21300000, guid: 353d71ad0422c3e4f928d004bf5330a7, type: 3}
+    Atk: 10
+    Def: 50
+    Hp: 0
+    Crit: 0
+  - Name: Spikes
+    Type: 0
+    Icon: {fileID: 21300000, guid: 8512cc71d629f5d4b81b9d5fb3956c70, type: 3}
+    Atk: 10
+    Def: 0
+    Hp: 0
+    Crit: 10
+  - Name: DuelSword
+    Type: 0
+    Icon: {fileID: 21300000, guid: 7ebaf4622a8e81448a1c237f2c4ed396, type: 3}
+    Atk: 40
+    Def: 0
+    Hp: 0
+    Crit: 10
+  - Name: RustySword
+    Type: 0
+    Icon: {fileID: 21300000, guid: a39a9c4991169234fb9015db00c5c772, type: 3}
+    Atk: 10
+    Def: 10
+    Hp: 10
+    Crit: 10
+  - Name: Spear
+    Type: 0
+    Icon: {fileID: 21300000, guid: 7eeeb3b84541adf47bbee355d5d92f13, type: 3}
+    Atk: 20
+    Def: 20
+    Hp: 10
+    Crit: 0
+  - Name: LavishSword
+    Type: 0
+    Icon: {fileID: 21300000, guid: b5d9e9d86efd23d43bb26c9387e110b4, type: 3}
+    Atk: 0
+    Def: 0
+    Hp: 5
+    Crit: 5
