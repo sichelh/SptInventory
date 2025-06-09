@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+
 public class Character
 {
     public string Id { get; private set; }
@@ -11,6 +14,10 @@ public class Character
     public float Def { get; private set; }
     public float Hp { get; private set; }
     public float Crit { get; private set; }
+
+    public List<Item> Inventory{ get; private set; }
+
+
     
     public Character(CharacterData data)
     {
@@ -23,5 +30,15 @@ public class Character
         Def = data.Def;
         Hp = data.Hp;
         Crit = data.Crit;
+        Inventory = new List<Item>();
     }
+
+    public void AddItem(Item item)
+    {
+        if (item == null) return;
+        
+        Inventory.Add(item);
+    }
+
+    
 }
