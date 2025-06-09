@@ -1,16 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIInventory : MonoBehaviour
 {
-    void Start()
+    [Header("Button")]
+    [SerializeField] private Button exitBtn;
+
+    private UIManager uiManager;
+    
+    private void Start()
     {
-        
+        uiManager = UIManager.Instance;
+        exitBtn.onClick.AddListener(ExitBtn);   
     }
 
-    void Update()
+    private void ExitBtn()
     {
-        
+        uiManager.MainMenu.OpenMainMenu();
+        gameObject.SetActive(false);
     }
 }
