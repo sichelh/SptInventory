@@ -20,17 +20,19 @@ public class UIStatus : MonoBehaviour
         exitBtn.onClick.AddListener(ExitBtn);   
     }
 
+    // 메인메뉴로 가는 버튼 작동하는 함수
     private void ExitBtn()
     {
         uiManager.MainMenu.OpenMainMenu();
         gameObject.SetActive(false);
     }  
     
+    // 플레이어 스탯 정보 스탯창에 반영
     public void SetPlayerStat(Character player)
     {
-        atkVal.text = $"{player.Atk}";
-        defVal.text = $"{player.Def}";
-        hpVal.text = $"{player.Hp}";
-        critVal.text = $"{player.Crit}";
+        atkVal.text = $"{player.EquippedAtk}";
+        defVal.text = $"{player.EquippedDef}";
+        hpVal.text = $"{player.EquippedHp}";
+        critVal.text = $"{player.EquippedCrit}";
     }
 }

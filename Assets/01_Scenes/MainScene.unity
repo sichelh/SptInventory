@@ -5796,7 +5796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitBtn: {fileID: 7267984639993760372}
-  slot: {fileID: 5093948056809524195, guid: 5131592e6d2f1694ead61d057a3d88e0, type: 3}
+  slotPrefab: {fileID: 9080601811983474585, guid: 5131592e6d2f1694ead61d057a3d88e0, type: 3}
   slotParent: {fileID: 333518059}
 --- !u!222 &8122045747039692687
 CanvasRenderer:

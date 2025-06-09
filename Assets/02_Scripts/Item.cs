@@ -2,8 +2,8 @@ using UnityEngine;
 
 public enum EItemType
 {
-    Equipable,
-    Usable
+    Weapon,
+    Armor
 }
 
 public class Item

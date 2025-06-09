@@ -23,17 +23,17 @@ MonoBehaviour:
   - Name: Axe
     Type: 0
     Icon: {fileID: 21300000, guid: 27753b95aa4c7114c9d09a3df5da165e, type: 3}
-    Atk: 0
-    Def: 50
+    Atk: 30
+    Def: 0
     Hp: 0
     Crit: 0
   - Name: Staff
     Type: 0
     Icon: {fileID: 21300000, guid: 165c0c9f5612b824ca5627866617034c, type: 3}
-    Atk: 0
+    Atk: 10
     Def: 0
-    Hp: 30
-    Crit: 0
+    Hp: 0
+    Crit: 20
   - Name: Bow
     Type: 0
     Icon: {fileID: 21300000, guid: 62a65106f63218a4b8d0d0362d19de36, type: 3}
@@ -52,9 +52,9 @@ MonoBehaviour:
     Type: 0
     Icon: {fileID: 21300000, guid: 353d71ad0422c3e4f928d004bf5330a7, type: 3}
     Atk: 10
-    Def: 50
+    Def: 0
     Hp: 0
-    Crit: 0
+    Crit: 20
   - Name: Spikes
     Type: 0
     Icon: {fileID: 21300000, guid: 8512cc71d629f5d4b81b9d5fb3956c70, type: 3}
@@ -73,20 +73,48 @@ MonoBehaviour:
     Type: 0
     Icon: {fileID: 21300000, guid: a39a9c4991169234fb9015db00c5c772, type: 3}
     Atk: 10
-    Def: 10
-    Hp: 10
+    Def: 0
+    Hp: 0
     Crit: 10
   - Name: Spear
     Type: 0
     Icon: {fileID: 21300000, guid: 7eeeb3b84541adf47bbee355d5d92f13, type: 3}
     Atk: 20
-    Def: 20
-    Hp: 10
+    Def: 0
+    Hp: 0
     Crit: 0
   - Name: LavishSword
     Type: 0
     Icon: {fileID: 21300000, guid: b5d9e9d86efd23d43bb26c9387e110b4, type: 3}
     Atk: 0
     Def: 0
-    Hp: 5
+    Hp: 0
     Crit: 5
+  - Name: BlueArmor
+    Type: 1
+    Icon: {fileID: 21300000, guid: 6fe18fc8d5ef5c4428f1cc7ab9d47b0b, type: 3}
+    Atk: 0
+    Def: 100
+    Hp: 50
+    Crit: 0
+  - Name: GreenArmor
+    Type: 1
+    Icon: {fileID: 21300000, guid: dcb6b0d2d1cff5c4992af019ad98bf91, type: 3}
+    Atk: 0
+    Def: 50
+    Hp: 100
+    Crit: 0
+  - Name: RedArmor
+    Type: 1
+    Icon: {fileID: 21300000, guid: a1077bf628fe2584c85f40fe594a4f5f, type: 3}
+    Atk: 0
+    Def: 80
+    Hp: 60
+    Crit: 0
+  - Name: YellowArmor
+    Type: 1
+    Icon: {fileID: 21300000, guid: 34312a818b9aefd4a8f0e53b5d68202e, type: 3}
+    Atk: 0
+    Def: 60
+    Hp: 80
+    Crit: 0

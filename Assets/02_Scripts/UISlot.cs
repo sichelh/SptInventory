@@ -5,54 +5,56 @@ using UnityEngine.UI;
 public class UISlot : MonoBehaviour
 {
     private Item slotItem;
+    [Header("Icon")]
     [SerializeField] private Image itemIcon;
     [SerializeField] private GameObject equipIcon;
+    [Header("Button")]
     [SerializeField] private Button equipBtn;
 
-    public bool isEquipped = false;
-
     private GameManager gameManager;
-    
-    private void Start()
+    private UIManager uiManager;
+
+    private void Awake()
     {
         gameManager = GameManager.Instance;
-        equipBtn.onClick.AddListener(EquipBtn);
+        uiManager = UIManager.Instance;
     }
 
-    public void EquipBtn()
+    private void Start()
     {
-        if (!isEquipped)
-        {
-            gameManager.Player.Equip(slotItem);
-            equipIcon.SetActive(true);
-            isEquipped = true;
-        }
-        else
-        {
-            gameManager.Player.UnEquip(slotItem);
-            equipIcon.SetActive(false);
-            isEquipped = false;
-        }
+        // 슬롯 클릭하면 장착되도록
+        equipBtn.onClick.AddListener(OnEquipBtn);
+    }
+
+    public void OnEquipBtn()
+    {
+        gameManager.Player.ToggleEquip(slotItem);
+        RefreshUI(); // 상태 최신화
+        uiManager.Inventory.RefreshAllSlots();
     }
     
+    // 슬롯 아이템에 아이템 Data 연결
     public void SetItem(Item item)
     {
         slotItem = item;
+        RefreshUI(); // 상태 최신화
     }
     
     public void RefreshUI()
     {
-        if (slotItem == null)
+        if (slotItem != null)
         {
-            itemIcon = null;
-        }
-        else
-        {
+            // 슬롯에 아이템이 있으면 아이콘 추가
             itemIcon.sprite = slotItem.Icon;
+
+            // Equip Icon 온오프
+            ToggleEquipIcon(gameManager.Player.IsEquipped(slotItem));
         }
+
     }
 
-    public void ToggleEquipIcon(bool isEnable)
+    // Equip 표시와 장착중 판별
+    private void ToggleEquipIcon(bool isEnable)
     {
         equipIcon.SetActive(isEnable);
     }

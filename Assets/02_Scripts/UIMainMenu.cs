@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,10 +15,12 @@ public class UIMainMenu : MonoBehaviour
     [SerializeField] private Button inventoryBtn;
 
     private UIManager uiManager;
+    private GameManager gameManager;
     
     private void Start()
     {
         uiManager = UIManager.Instance;
+        gameManager = GameManager.Instance;
         statusBtn.onClick.AddListener(OpenStatus);
         inventoryBtn.onClick.AddListener(OpenInventory);
     }
@@ -32,6 +35,9 @@ public class UIMainMenu : MonoBehaviour
     {
         uiManager.Status.gameObject.SetActive(true);
         ToggleMainMenuBtn(false);
+        
+        // Status 창 열 때마다 Stat 변화 반영
+        uiManager.Status.SetPlayerStat(gameManager.Player);
     }
 
     private void OpenInventory()
@@ -40,12 +46,14 @@ public class UIMainMenu : MonoBehaviour
         ToggleMainMenuBtn(false);
     }
 
+    // 메인메뉴에 있는 버튼 두개 토글
     private void ToggleMainMenuBtn(bool isEnable)
     {
         statusBtn.gameObject.SetActive(isEnable);
         inventoryBtn.gameObject.SetActive(isEnable);
     }
 
+    // 메인메뉴에 있는 플레이어 정보 반영
     public void SetPlayerInfo(Character player)
     {
         id.text = $"{player.Id}";

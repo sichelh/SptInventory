@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
+    [Header("ScriptableObjects")]
     [SerializeField] private CharacterData playerData;
     [SerializeField] private ItemDataList itemDataList;
     private Character player;
