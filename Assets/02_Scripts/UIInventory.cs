@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,8 @@ public class UIInventory : MonoBehaviour
     [Header("Slot")] 
     [SerializeField] private GameObject slotPrefab;
     [SerializeField] private Transform slotParent;
+
+    [Header("Info")] [SerializeField] private TextMeshProUGUI itemNum;
     
     private List<UISlot> slots = new List<UISlot>();
 
@@ -20,6 +23,7 @@ public class UIInventory : MonoBehaviour
     {
         uiManager = UIManager.Instance;
         gameManager = GameManager.Instance;
+        
         exitBtn.onClick.AddListener(ExitBtn);
         InitInventoryUI();
     }
@@ -34,7 +38,11 @@ public class UIInventory : MonoBehaviour
     // 인벤토리 슬롯 초기화
     public void InitInventoryUI()
     {
-        for (int i=0; i<gameManager.Player.Inventory.Count; i++)
+        // 아이템 보유 수
+        int myItemNum = gameManager.Player.Inventory.Count;
+        itemNum.text = $"{myItemNum}";
+        
+        for (int i=0; i<myItemNum; i++)
         {
             GameObject slotGO = Instantiate(slotPrefab, slotParent);
             UISlot uiSlot = slotGO.GetComponent<UISlot>();
