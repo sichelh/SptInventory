@@ -5798,6 +5798,7 @@ MonoBehaviour:
   exitBtn: {fileID: 7267984639993760372}
   slotPrefab: {fileID: 9080601811983474585, guid: 5131592e6d2f1694ead61d057a3d88e0, type: 3}
   slotParent: {fileID: 333518059}
+  itemNum: {fileID: 5744145938663441886}
 --- !u!222 &8122045747039692687
 CanvasRenderer:
   m_ObjectHideFlags: 0
