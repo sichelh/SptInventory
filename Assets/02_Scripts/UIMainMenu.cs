@@ -8,6 +8,7 @@ public class UIMainMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI id;
     [SerializeField] private TextMeshProUGUI goldVal;
     [SerializeField] private TextMeshProUGUI levelVal;
+    [SerializeField] private TextMeshProUGUI expVal;
     [Header("Button")]
     [SerializeField] private Button statusBtn;
     [SerializeField] private Button inventoryBtn;
@@ -45,10 +46,11 @@ public class UIMainMenu : MonoBehaviour
         inventoryBtn.gameObject.SetActive(isEnable);
     }
 
-    private void SetPlayerInfo(Character character)
+    public void SetPlayerInfo(Character player)
     {
-        id.text = character.Id;
-        goldVal.text = character.Gold.ToString();
-        levelVal.text = character.Level.ToString();
+        id.text = $"{player.Id}";
+        levelVal.text = $"{player.Level}";
+        goldVal.text = $"{player.Gold}";
+        expVal.text = $"{player.CurExp} / {player.MaxExp}";
     }
 }

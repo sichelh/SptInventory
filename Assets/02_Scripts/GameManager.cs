@@ -1,16 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
-    void Start()
+    [SerializeField] private CharacterData playerData;
+    private Character player;
+    public Character Player => player;
+    
+    private UIManager uiManager;
+    
+    private void Start()
     {
-        
+        uiManager = UIManager.Instance;
+        SetData(playerData);
     }
 
-    void Update()
+    private void SetData(CharacterData data)
     {
-        
+        player = new Character(data);
+        uiManager.MainMenu.SetPlayerInfo(player);
+        uiManager.Status.SetPlayerStat(player);
     }
 }
