@@ -4,6 +4,8 @@ using UnityEngine;
 public class CharacterData : ScriptableObject
 {
     public string Id;
+    public string Class;
+    public string Description;
     public int Level;
     public float CurExp;
     public float MaxEXp;

@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -50,7 +49,6 @@ public class UISlot : MonoBehaviour
             // Equip Icon 온오프
             ToggleEquipIcon(gameManager.Player.IsEquipped(slotItem));
         }
-
     }
 
     // Equip 표시와 장착중 판별
@@ -58,6 +56,4 @@ public class UISlot : MonoBehaviour
     {
         equipIcon.SetActive(isEnable);
     }
-    
-    
 }

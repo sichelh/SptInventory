@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class UIManager : Singleton<UIManager>
@@ -10,5 +9,4 @@ public class UIManager : Singleton<UIManager>
     public UIMainMenu MainMenu => mainMenu;
     public UIStatus Status => status;
     public UIInventory Inventory => inventory;
-    
 }

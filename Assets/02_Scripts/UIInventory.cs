@@ -51,6 +51,7 @@ public class UIInventory : MonoBehaviour
         }
     }
 
+    // 모든 슬롯 UI 업데이트
     public void RefreshAllSlots()
     {
         for (int i=0; i<slots.Count; i++)

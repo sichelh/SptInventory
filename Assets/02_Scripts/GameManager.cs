@@ -29,5 +29,4 @@ public class GameManager : Singleton<GameManager>
             player.AddItem(new Item(item));
         }
     }
-
 }

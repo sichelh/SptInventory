@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,6 +6,8 @@ public class UIMainMenu : MonoBehaviour
 {
     [Header("Info")]
     [SerializeField] private TextMeshProUGUI id;
+    [SerializeField] private TextMeshProUGUI playerClass;
+    [SerializeField] private TextMeshProUGUI description;
     [SerializeField] private TextMeshProUGUI goldVal;
     [SerializeField] private TextMeshProUGUI levelVal;
     [SerializeField] private TextMeshProUGUI expVal;
@@ -57,6 +58,8 @@ public class UIMainMenu : MonoBehaviour
     public void SetPlayerInfo(Character player)
     {
         id.text = $"{player.Id}";
+        playerClass.text = $"{player.Class}";
+        description.text = $"{player.Description}";
         levelVal.text = $"{player.Level}";
         goldVal.text = $"{player.Gold}";
         expVal.text = $"{player.CurExp} / {player.MaxExp}";

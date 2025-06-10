@@ -4,6 +4,8 @@ using System.Linq;
 public class Character
 {
     public string Id { get; private set; }
+    public string Class { get; private set; }
+    public string Description { get; private set; }
     public int Level { get; private set; }
     public float CurExp { get; private set; }
     public float MaxExp { get; private set; }
@@ -23,9 +25,12 @@ public class Character
     public float EquippedHp => Hp + equipped.Sum(i => i.Hp);
     public float EquippedCrit => Crit + equipped.Sum(i => i.Crit);
     
+    // 생성자 data 넣기
     public Character(CharacterData data)
     {
         Id = data.Id;
+        Class = data.Class;
+        Description = data.Description;
         Level = data.Level;
         CurExp = data.CurExp;
         MaxExp = data.MaxEXp;
@@ -58,7 +63,7 @@ public class Character
         }
     }
 
-    public void Equip(Item item)
+    private void Equip(Item item)
     {
         if (!IsEquipped(item))
         {
@@ -76,7 +81,7 @@ public class Character
         }
     }
 
-    public void UnEquip(Item item)
+    private void UnEquip(Item item)
     {
         // 장착해제 - 장착 리스트에서 제거
         equipped.Remove(item);
