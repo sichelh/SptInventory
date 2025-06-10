@@ -6166,6 +6166,7 @@ GameObject:
   - component: {fileID: 1585821395228029998}
   - component: {fileID: 472205059547351127}
   - component: {fileID: 6680845083886580472}
+  - component: {fileID: 8137270713878446868}
   m_Layer: 5
   m_Name: expBar
   m_TagString: Untagged
@@ -6173,6 +6174,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8137270713878446868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8137270713878446867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f50bb479d4daaa4296a0fcfd4562362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8227678136322491491
 MonoBehaviour:
   m_ObjectHideFlags: 0
