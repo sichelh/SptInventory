@@ -45,6 +45,9 @@ public class UIMainMenu : MonoBehaviour
     {
         uiManager.Inventory.gameObject.SetActive(true);
         ToggleMainMenuBtn(false);
+        
+        // Inventory 창 열 때마다 초기화
+        uiManager.Inventory.InitInventoryUI();
     }
 
     // 메인메뉴에 있는 버튼 두개 토글

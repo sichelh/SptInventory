@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -18,12 +19,15 @@ public class UIInventory : MonoBehaviour
 
     private UIManager uiManager;
     private GameManager gameManager;
-    
-    private void Start()
+
+    private void Awake()
     {
         uiManager = UIManager.Instance;
         gameManager = GameManager.Instance;
-        
+    }
+
+    private void Start()
+    {
         exitBtn.onClick.AddListener(ExitBtn);
         InitInventoryUI();
     }
@@ -31,6 +35,8 @@ public class UIInventory : MonoBehaviour
     // 메인메뉴로 가는 버튼 작동하는 함수
     private void ExitBtn()
     {
+        ClearAllSlots();
+        
         uiManager.MainMenu.OpenMainMenu();
         gameObject.SetActive(false);
     }
@@ -39,11 +45,7 @@ public class UIInventory : MonoBehaviour
     public void InitInventoryUI()
     {
         // 기존 슬롯 제거하여 중복 생성 방지
-        foreach (var slot in slots)
-        {
-            Destroy(slot.gameObject);
-        }
-        slots.Clear();
+        ClearAllSlots();
         
         // 아이템 보유 수
         int myItemNum = gameManager.Player.Inventory.Count;
@@ -56,6 +58,16 @@ public class UIInventory : MonoBehaviour
             slots.Add(uiSlot);
             uiSlot.SetItem(gameManager.Player.Inventory[i]);
         }
+    }
+
+    // 슬롯 제거
+    public void ClearAllSlots()
+    {
+        foreach (var slot in slots)
+        {
+            Destroy(slot.gameObject);
+        }
+        slots.Clear();
     }
 
     // 모든 슬롯 UI 업데이트
