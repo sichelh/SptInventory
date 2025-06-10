@@ -1,6 +1,5 @@
 # Unity RPG Inventory System
-![Image](https://github.com/user-attachments/assets/70ca6789-2102-42c2-8b2b-48788cb3c770)
-
+![Movie_001](https://github.com/user-attachments/assets/46c5bcff-836c-4d9a-b217-293922dc6ee0)
 
 Unity 기반의 간단한 RPG 인벤토리 시스템 프로젝트입니다.  
 플레이어 정보, 상태창, 인벤토리 UI 및 아이템 장착 기능을 포함하고 있습니다.
