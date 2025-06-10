@@ -13,6 +13,14 @@ public class GameManager : Singleton<GameManager>
     private void Start()
     {
         uiManager = UIManager.Instance;
+        
+        // ScriptableObject 누락 시 예외처리
+        if (playerData == null || itemDataList == null)
+        {
+            Debug.LogError("ScriptableObject가 누락되었습니다.");
+            return;
+        }
+        
         SetData(playerData);
     }
 

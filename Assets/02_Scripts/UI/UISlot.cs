@@ -41,6 +41,12 @@ public class UISlot : MonoBehaviour
     
     public void RefreshUI()
     {
+        // 아이콘 설정 안했을 경우
+        if (slotItem.Icon == null)
+        {
+            Debug.LogWarning($"[{slotItem.Name}] 아이템에 아이콘이 없습니다.");
+        }
+        
         if (slotItem != null)
         {
             // 슬롯에 아이템이 있으면 아이콘 추가

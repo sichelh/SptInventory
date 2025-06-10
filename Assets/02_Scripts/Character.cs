@@ -52,6 +52,9 @@ public class Character
     
     public void ToggleEquip(Item item)
     {
+        // 아이템이 없으면 return
+        if (item == null) return;
+        
         // 장착중이면 장착해제
         if (IsEquipped(item))
         {
@@ -92,6 +95,4 @@ public class Character
         // 장착 리스트에 아이템 있는지 확인
         return equipped.Contains(item);
     }
-
-    
 }

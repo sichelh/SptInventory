@@ -38,6 +38,13 @@ public class UIInventory : MonoBehaviour
     // 인벤토리 슬롯 초기화
     public void InitInventoryUI()
     {
+        // 기존 슬롯 제거하여 중복 생성 방지
+        foreach (var slot in slots)
+        {
+            Destroy(slot.gameObject);
+        }
+        slots.Clear();
+        
         // 아이템 보유 수
         int myItemNum = gameManager.Player.Inventory.Count;
         itemNum.text = $"{myItemNum}";
